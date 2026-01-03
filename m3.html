@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Data</title>
+</head>
+<body>
+
+    <h3>Simple Form</h3>
+
+    <form onsubmit="showData(event)">
+        Name: <input type="text" id="name" required><br><br>
+        Email: <input type="email" id="email" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function showData(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            document.getElementById("output").innerHTML =
+                "Name: " + name + "<br>Email: " + email;
+        }
+    </script>
+
+</body>
+</html>
